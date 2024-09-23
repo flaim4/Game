@@ -14,7 +14,11 @@ set(SOURCES
 
 add_executable(Game ${SOURCES})
 
+find_package(glad CONFIG REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(GLEW REQUIRED)
+find_package(glm CONFIG REQUIRED)
 
-target_link_libraries(Game PRIVATE glfw GLEW::GLEW)
+include_directories("C:/Users/flaim/Desktop/vcpkg/installed/x64-windows/include")
+
+target_link_libraries(Game PRIVATE glad::glad glm::glm glfw GLEW::GLEW)
