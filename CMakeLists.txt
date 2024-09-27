@@ -18,7 +18,8 @@ find_package(glad CONFIG REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(glm CONFIG REQUIRED)
+find_package(tinyobjloader CONFIG REQUIRED)
 
 include_directories("C:/Users/flaim/Desktop/vcpkg/installed/x64-windows/include")
 
-target_link_libraries(Game PRIVATE glad::glad glm::glm glfw GLEW::GLEW)
+target_link_libraries(Game PRIVATE tinyobjloader::tinyobjloader glad::glad glm::glm glfw GLEW::GLEW)
